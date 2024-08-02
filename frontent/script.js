@@ -8,32 +8,35 @@ adivinarNumeroForm.addEventListener('submit', async event => {
 
 	console.log(numeroInput.value);
 	const formData = new FormData(adivinarNumeroForm);
+	console.log(formData)
     const data = {};
     formData.forEach((value, key) => {
         data[key] = value;
     });
+    console.log(data)
 
     try {
     	
-    	// const response = await fetch('https:/localhost/adivinar', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(data),
-        // });
+    	const response = await fetch('https://localhost:8000/adivinar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
 
-        // if (!response.ok) {
-        //     throw new Error('Error en la solicitud: ' + response.statusText);
+        if (!response.ok) {
+            throw new Error('Error en la solicitud: ' + response.statusText);
+        }
+
+    	const result = await response.json();
+
+    	//respuesta simulada
+        // const result = {
+        // 	header: "hello world",
+        // 	data: 1241441
         // }
 
-    	//const result = await response.json();
-    	
-    	//respuesta simulada
-        const result = {
-        	header: "hello world",
-        	data: 1241441
-        }
         console.log('Éxito:', result);
 
     } catch(e) {
