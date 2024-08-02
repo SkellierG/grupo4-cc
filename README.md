@@ -4,7 +4,7 @@
 
 Bienvenidos y bienvenidas al primer evento de programación de la comunidad, en este evento se dejará un proyecto simple el cuál tendrán que realizar en grupo, **se dejará el plazo de 5 días** para que puedan realizar este primer de muchos otros proyectos, vale recalcar que todos serán sencillos para que aprendamos a trabajar en equipo, aprender más en programación y compartir conocimientos, así como interactuar, entre ustedes coordinen en sus chats privados el lenguaje que usarán y la forma en que se dividirán el proyecto, también pueden hacer uso de los canales de voz y acuerden un día juntos hacerlo en llamada, todo depende de ustedes, sin más, **a continuación les dejo el primer proyecto:**
 
-**-> __Juego de Adivinanza de Números__**
+**->Juego de Adivinanza de Números**
 
 ## __Requisitos Funcionales:__
 - **Generar un Número Aleatorio:** El sistema debe generar un número aleatorio dentro de un rango especificado entre 1 y 50.
