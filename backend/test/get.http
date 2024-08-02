@@ -1,0 +1,9 @@
+# Solicitud GET para el endpoint raíz
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+# Solicitud GET para el endpoint /items/{item_id}
+GET http://127.0.0.1:8000/items/42?q=searchterm
+Accept: application/json
