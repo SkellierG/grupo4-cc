@@ -1,6 +1,6 @@
 # INFO
 
-![EVENTO](EVENTO)
+![EVENTO](./EVENTO.md)
 
 # Caracteristicas
 ## Arquitectura:
@@ -50,8 +50,8 @@ http-server -a localhost -p 8080
 
 # Frontend
 
-![FRONTEND](FRONTEND)
+![FRONTEND](./frontend/FRONTEND.md)
 
 # Backend
 
-![BACKEND](BACKEND)
+![BACKEND](./backend/BACKEND.md)
