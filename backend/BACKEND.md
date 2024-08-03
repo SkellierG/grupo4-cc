@@ -1,5 +1,5 @@
 # EndPoints
-## http://localhost:8080/
+## http://localhost:8000/
 GET
 Root Directory (nothing)
 
@@ -8,7 +8,7 @@ POST
 ### req:
 ```http
 POST /adivinar HTTP/1.1
-Host: localhost:8000
+Host: localhost:8080
 Content-Type: application/json
 
 {
