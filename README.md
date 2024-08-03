@@ -3,7 +3,7 @@
 ![EVENTO](./EVENTO.md)
 
 # Caracteristicas
-## Arquitectura:
+## Arquitectura
 REST API http protocol
 **Backend:** Python fastapi
 **Frontend:** Static web
