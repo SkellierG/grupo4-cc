@@ -11,13 +11,15 @@ adivinarNumeroForm.addEventListener('submit', async event => {
 	console.log(formData)
     const data = {};
     formData.forEach((value, key) => {
-        data[key] = value;
+        data[key] = Number(value);
     });
-    console.log(data)
+    console.log(data);
+
+    //console.log(JSON.stringify(data));
 
     try {
     	
-    	const response = await fetch('https://localhost:8000/adivinar', {
+    	const response = await fetch('http://localhost:8000/adivinar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

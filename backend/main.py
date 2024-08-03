@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, ValidationError
-from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 

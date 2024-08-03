@@ -1,21 +1,57 @@
-# Reglas del Reto:
+# INFO
 
-## **EVENTO DE PROGRAMACIÓN**
+![EVENTO](./EVENTO.md)
 
-Bienvenidos y bienvenidas al primer evento de programación de la comunidad, en este evento se dejará un proyecto simple el cuál tendrán que realizar en grupo, **se dejará el plazo de 5 días** para que puedan realizar este primer de muchos otros proyectos, vale recalcar que todos serán sencillos para que aprendamos a trabajar en equipo, aprender más en programación y compartir conocimientos, así como interactuar, entre ustedes coordinen en sus chats privados el lenguaje que usarán y la forma en que se dividirán el proyecto, también pueden hacer uso de los canales de voz y acuerden un día juntos hacerlo en llamada, todo depende de ustedes, sin más, **a continuación les dejo el primer proyecto:**
+# Caracteristicas
+## Arquitectura
+REST API http protocol
+**Backend:** Python fastapi
+**Frontend:** Static web
 
-**-> __Juego de Adivinanza de Números__**
+## Comandos
+### Host Backend
+#### Python
+```bash
+pip install uvicorn
+```
 
-## __Requisitos Funcionales:__
-- **Generar un Número Aleatorio:** El sistema debe generar un número aleatorio dentro de un rango especificado entre 1 y 50.
-- **Solicitar Adivinanza:** Pedir al usuario que adivine el número.
-- **Proporcionar Retroalimentación:** Informar al usuario si su adivinanza es demasiado alta, demasiado baja, o correcta.
-- **Contar Intentos:** Llevar un registro del número de intentos que ha realizado el usuario.
-- **Permitir Reintentos:** Después de una adivinanza correcta, ofrecer la opción de jugar de nuevo.
+```bash
+cd ./backend
+```
 
-## __Requisitos No Funcionales:__
-**Interfaz de Usuario:** Puede ser una aplicación gráfica básica o pueden realizar el proyecto por consola.
-**Validación de Entradas:** Manejar entradas no numéricas y otras posibles entradas inválidas como los números aleatorios negativos.
+```bash
+uvicorn main:app --host localhost --port 8000
+```
 
-## **NOTA:** 
-Recordarles que no es una competencia y no se permite la burla entre equipos rivales, de ustedes dependerá guardar en secreto su proyecto grupal si así lo desean, pueden consultar con < usuario > ante cualquier duda que tengan, diviértanse.
+### Host Frontent
+#### Python
+version: 3.x
+```bash
+cd ./frontend
+```
+
+```bash
+python -m http.server -p HTTP/1.1 8080 --bind localhost
+```
+
+#### NPM
+node package manager
+```bash
+npm install -g http-server
+```
+
+```bash
+cd ./frontend
+```
+
+```bash
+http-server -a localhost -p 8080
+```
+
+# Frontend
+
+![FRONTEND](./frontend/FRONTEND.md)
+
+# Backend
+
+![BACKEND](./backend/BACKEND.md)
