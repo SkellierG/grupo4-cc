@@ -1,33 +1,33 @@
 # EndPoints
-- http://localhost:8000/
-	- GET
-	- Root Directory (nothing)
+## http://localhost:8000/
+GET
+Root Directory (nothing)
 
-- /adivinar
-	- POST
-	- req:
-		```http
-		POST /adivinar HTTP/1.1
-		Host: localhost:8000
-		Content-Type: application/json
-		
-		{
-		    "numero": 50
-		}
-		```
+## /adivinar
+POST
+### req:
+```http
+POST /adivinar HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
 
-	- res:
-		```http
-		HTTP/1.1 200 OK
-		content-type: application/json
-		Content-Length: 67
-		
-		{
-			"numberfinded": false,
-			"attempts": 2,
-			"feedback": "the number is lower"
-		}
-		```
+{
+	"numero": 50
+}
+```
+
+### res:
+```http
+HTTP/1.1 200 OK
+content-type: application/json
+Content-Length: 67
+
+{
+	"numberfinded": false,
+	"attempts": 2,
+	"feedback": "the number is lower"
+}
+```
 
 # CORS
 ```python
