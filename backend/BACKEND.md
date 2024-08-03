@@ -7,18 +7,20 @@
 	- POST
 	- req:
 		```http
-		content-type:application/json
+		POST http://localhost:8000/adivinar HTTP/1.1
+		Content-Type: application/json
+		
 		{
-			numero: int
+		    "numero": 50
 		}
 		```
 	- res:
 		```http
 		content-type:application/json
 		{
-			numberfinded: boolean
-			attempts: int
-			feedback: string
+			numberfinded: false
+			attempts: 2
+			feedback: "the number is lower"
 		}
 		```
 
