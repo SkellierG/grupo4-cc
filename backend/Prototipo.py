@@ -21,6 +21,7 @@ class JuegoAdivinarNumero:
                 respuesta = int(input("Ingrese Numero: "))
                 if (respuesta < self.valorminimo or respuesta > self.valormaximo):
                     print("ERROR! Ingresa numero valido")
+                    break
             except ValueError:
                 print("ERROR! Ingresa numero valido")
                 

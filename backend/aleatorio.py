@@ -1,33 +1,48 @@
 import random
-intentos = 0
-NumeroAleatorio = random.randint(1,50) #---------Se utiliza el .randint para que aparezcan solo enteros, y lo que esta entre parentesis es para crear parametros
-print(NumeroAleatorio) #------------Hacer trampa sabiendo el numero random, para verificar
-print("""Que tal usuario :D !!!         
-Bienvenido al juego de Adivanzas de Numeros
-OJO: El numero random ha adivinar va desde 1 al 50
-""")        #-----------------Bienvenida
-while (intentos <= 3):
-    print("Numero de intento: ", intentos)
-    print("Ingrese Numero:") #-------------Solicitud de numero
-    Respuesta = int(input())
-    if (Respuesta <=0):
-        print("ERROR! Numero no valido")
-        break #---------------------Use el break para terminar el juego / Validacion
-    elif(Respuesta >=50):
-        print("ERROR! Numero no valido") 
-        break #---------------------Use el break para terminar el juego / Validacion
-    if(Respuesta == NumeroAleatorio):
-        print("Felicidades! Adivinaste el Numero!")
-        print("Solo te tomo ", intentos, "intentos xd")
-        print("Fin del juego...")
-        break 
-    elif(Respuesta > NumeroAleatorio):
-        print("El numero ingresado es mayor al numero random")
-        intentos += 1
-    elif(Respuesta < NumeroAleatorio):
-        print("El numero ingresado es menor al numero random")
-        intentos += 1
-if intentos > 3: #--------------Aqui ya acaba el juego, revelando el numero aleatorio
-    print("============RESULTADOS============")
-    print("Has agotado tus 3 intentos :( ----> El numero era:", NumeroAleatorio)
-    print("==================================")
+class JuegoAdivinarNumero:
+    def __init__(self, valorminimo=1, valormaximo=50, intentosMaximos=3):
+        self.valorminimo = valorminimo
+        self.valormaximo = valormaximo
+        self.numeroRandom = random.randint(self.valorminimo, self.valormaximo)
+        self.intentosMaximos = intentosMaximos
+        self.intentos = 0
+        
+    def Bienvenida(self):
+        print("""Que tal usuario :D !!!         
+        Bienvenido al juego de Adivanzas de Numeros
+        OJO: El numero random ha adivinar va desde 1 al 50
+        """)
+        
+    def SolicitarNumero(self):
+        while True:
+            try:
+                respuesta = int(input("Ingrese Numero: "))
+                if self.valorminimo <= respuesta <= self.valormaximo:
+                    return respuesta
+                else:
+                    print(f"ERROR! Ingresa un número entre {self.valorminimo} y {self.valormaximo}")
+            except ValueError:
+                print("ERROR! Ingresa un número válido")
+                
+    def Resultado(self):
+        print(f"Has agotado tus {self.intentosMaximos} intentos :( ----> El numero era: {self.numeroRandom}")
+    
+    def juego(self):
+        self.Bienvenida()
+        while self.intentos < self.intentosMaximos:
+            print(f"Numero de intento: {self.intentos + 1}")
+            respuesta = self.SolicitarNumero()
+            self.intentos += 1
+
+            if respuesta == self.numeroRandom:
+                print(f"Felicidades! Adivinaste el Numero! Solo te tomó {self.intentos} intentos xd")
+                return
+            elif respuesta > self.numeroRandom:
+                print("El número ingresado es mayor al número random")
+            else:
+                print("El número ingresado es menor al número random")
+        
+        self.Resultado()
+
+juegoIniciar = JuegoAdivinarNumero()
+juegoIniciar.juego()
