@@ -7,20 +7,25 @@
 	- POST
 	- req:
 		```http
-		POST http://localhost:8000/adivinar HTTP/1.1
+		POST /adivinar HTTP/1.1
+		Host: localhost:8000
 		Content-Type: application/json
 		
 		{
 		    "numero": 50
 		}
 		```
+
 	- res:
 		```http
-		content-type:application/json
+		HTTP/1.1 200 OK
+		content-type: application/json
+		Content-Length: 67
+		
 		{
-			numberfinded: false
-			attempts: 2
-			feedback: "the number is lower"
+			"numberfinded": false,
+			"attempts": 2,
+			"feedback": "the number is lower"
 		}
 		```
 
