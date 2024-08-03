@@ -43,5 +43,7 @@ class JuegoAdivinarNumero:
             
         if self.intentos >= self.intentosMaximos and respuesta != self.numeroRandom:
             return self.Resultado
+
+
 juegoIniciar = JuegoAdivinarNumero()
 juegoIniciar.juego()

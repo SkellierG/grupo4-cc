@@ -12,15 +12,24 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class FormData(BaseModel):
+class Adivinanza(BaseModel):
     numero: int
+
+class Retry(BaseModel):
+    retry: bool
+
+class FetchDB():
+    fetch: bool
 
 
 @app.get("/")
 def read_root():
-    return { 'message': "root" }
+    return { 'message': "que heces bobo" }
 
 @app.post("/adivinar")
-def adivinar(data: FormData):
-    return { 'status': "success",
-             'data': data }
+def adivinar(data: Adivinanza):
+    return data
+
+@app.post("/retry")
+def retry(data: retry):
+    return
