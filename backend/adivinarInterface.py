@@ -6,7 +6,7 @@ class Iadivinar(ABC):
         self.number = 0
 
     @abstractmethod
-    def getNumber:
+    def getNumber(self):
         # {
         #     hidennumber: int
         # }
@@ -15,7 +15,7 @@ class Iadivinar(ABC):
         pass
     
     @abstractmethod
-    def setNumber:
+    def setNumber(self):
         # {
         #     created: bool
         # }
@@ -46,7 +46,7 @@ class Iadivinar(ABC):
         pass
 
     @abstractmethod
-    def retry:
+    def refresh(self):
         # resetea todo como si fuera recien ejecutado
         pass
 
