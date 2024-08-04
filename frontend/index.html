@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<script type="text/javascript" src="script.js" defer></script>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Adivina</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinanza de Números</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header>
-		
-	</header>
-	<content>
-		<div>
-			<h1>Adivina El Numero</h1>
-		</div>
-		<div>
-			<h3>Intentos: <span id="intentos">3</span></h3>
-			<span id="feedback"></span>
-		</div>
-		<form id="adivinarNumeroForm">
-			<input type="number" name="numero" id="numeroInput">
-			<button type="submit">Advinar</button>
-		</form>
-	</content>
-	<footer>
-		
-	</footer>
+<div class="container">
+    <h1>Juego de Adivinanza de Números</h1>
+    <div id="gameControls">
+        <button id="startButton" class="btn-primary">Iniciar Juego</button>
+        <button id="restartButton" class="btn-secondary" style="display: none;">Reiniciar Juego</button>
+    </div>
+    <div id="gameStatus" style="display: none;">
+        <input type="number" id="guessInput" min="1" max="50" class="input-number">
+        <p id="earlyfeedback" class="message"><span id="earlybox"></span></p>
+        <button id="guessButton" class="btn-primary">Adivinar</button>
+        <p id="attemptsRemaining" class="message">Intentos restantes: <span id="attemptsCount"></span></p>
+    </div>
+    <div id="result" style="display: none;">
+        <p id="resultMessage" class="result-message"></p>
+    </div>
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>

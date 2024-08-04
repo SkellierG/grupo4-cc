@@ -43,6 +43,5 @@ class JuegoAdivinarNumero:
                 print("El número ingresado es menor al número random")
         
         self.Resultado()
-
 juegoIniciar = JuegoAdivinarNumero()
 juegoIniciar.juego()
