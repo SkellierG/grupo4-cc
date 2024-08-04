@@ -20,6 +20,7 @@ class Sadivinar(Iadivinar):
     def setNumber(self):
         self.refresh()
         self.hidden_number = random.randint(self.valorminimo, self.valormaximo)
+        # self.hidden_number = 2
         self.intentos = self.intentosMaximos
         return {'created': True}
     

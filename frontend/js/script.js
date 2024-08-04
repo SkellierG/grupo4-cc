@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
             resultMessage.textContent = responseParsed.feedback;
 
             if (responseParsed.numberfinded == true) {
+                attemptsCount.textContent = responseParsed.attempts;
                 earlybox.textContent = responseParsed.feedback;
-                resultMessage.textContent = feedback;
+                resultMessage.textContent = responseParsed.feedback;
                 result.style.display = "block";
                 gameStatus.style.display = "none";
                 startButton.style.display = "none";
