@@ -113,6 +113,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     startButton.addEventListener("click", startGame);
-    guessButton.addEventListener("click", makeGuess);
+    guessButton.addEventListener("click", ()=>{
+        if (parseInt(guessInput.value, 10) >= 1 && parseInt(guessInput.value, 10) <= 50) {
+            makeGuess()
+        } else {
+            earlybox.textContent = "El numero debe ser entre 1 y 50!";
+        }
+    });
     restartButton.addEventListener("click", restartGame);
 });
