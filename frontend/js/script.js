@@ -74,29 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }).catch(error => {
             console.error('Error:', error);
         });
-            // .then(text => {
-            //     if (text.includes("Fin del juego")) {
-            //         resultMessage.textContent = text;
-            //         result.style.display = "block";
-            //         gameStatus.style.display = "none";
-            //         startButton.style.display = "none";
-            //         restartButton.style.display = "block";
-            //     } else {
-            //         attemptsLeft--;
-            //         attemptsCount.textContent = attemptsLeft;
-            //         if (attemptsLeft <= 0) {
-            //             resultMessage.textContent = "Fin del juego! El número era: " + text.split("El número era: ")[1];
-            //             result.style.display = "block";
-            //             gameStatus.style.display = "none";
-            //             startButton.style.display = "none";
-            //             restartButton.style.display = "block";
-            //         } else {
-            //             // Actualizar mensaje con el texto proporcionado por el servidor
-            //             resultMessage.textContent = text;
-            //         }
-            //     }
-            //}
-            //);
     }
 
     function restartGame() {
