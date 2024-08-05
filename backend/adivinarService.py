@@ -33,15 +33,16 @@ class Sadivinar(Iadivinar):
         return {'feedback': feedback.get('d'), 'finded': False}
     
     def feedback(self, number):
+        if self.intentos <= 0 and not ( number == self.hidden_number ):
+            return { 'd': f"Perdiste, Fin del juego! El número era: {self.hidden_number}" , 'f': False }
+            self.refresh()
         if number < self.hidden_number:
             return { 'd': "El número es mayor.", 'f': False }
         elif number > self.hidden_number:
             return { 'd': "El número es menor.", 'f': False } 
         elif number == self.hidden_number:
             return { 'd': f"¡Has acertado! El número escondido era {self.hidden_number}.", 'f': True }
-        elif self.intentos <= 0 and not (number == self.hidden_number):
-            return { 'd': f"Perdiste, Fin del juego! El número era: {self.hidden_number}" , 'f': False }
-            self.refresh()
+       
     def refresh(self):
         self.hidden_number = None
         self.intentos = 0

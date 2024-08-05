@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             method: "POST"
         }).then(response => {
             if (response.ok) {
+                earlybox.textContent = '';
                 gameStatus.style.display = "block";
                 startButton.style.display = "none";
                 restartButton.style.display = "none";
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (responseParsed.numberfinded == true) {
                 attemptsCount.textContent = responseParsed.attempts;
-                earlybox.textContent = responseParsed.feedback;
+                earlybox.textContent = '';
                 resultMessage.textContent = responseParsed.feedback;
                 result.style.display = "block";
                 gameStatus.style.display = "none";
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (responseParsed.attempts <= 0 && responseParsed.numberfinded == false) {
                 attemptsCount.textContent = responseParsed.attempts;
+                earlybox.textContent = '';
                 resultMessage.textContent = responseParsed.feedback;
                 result.style.display = "block";
                 gameStatus.style.display = "none";
@@ -86,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 result.style.display = "none";
                 attemptsLeft = 3;
                 attemptsCount.textContent = attemptsLeft;
+                earlybox.textContent = ''; 
             }
         });
     }
